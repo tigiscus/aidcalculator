@@ -56,8 +56,11 @@
   <ItemGroup>
     <Compile Include="Logic\GiftAidCalculator.cs" />
     <Compile Include="Logic\IGiftAidCalculator.cs" />
+    <Compile Include="Models\GiftAidSettings.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\GiftAidSettingsRepository.cs" />
+    <Compile Include="Repositories\IGiftAidSettingsRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config">

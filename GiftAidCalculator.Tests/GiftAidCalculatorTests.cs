@@ -16,7 +16,22 @@ namespace GiftAidCalculator.Tests
         public void Story1(decimal donation, decimal expectedResult)
         {
             //arrange
-            var giftAidCalculator = new GiftAidCalculatorFixture().Create();
+            var giftAidCalculator = new GiftAidCalculatorFixture().SetupTaxRate().Create();
+
+            //act
+            var result = giftAidCalculator.Calculate(donation);
+
+            //assert
+            Assert.AreEqual(expectedResult, result);
+        }
+
+        [Test]
+        [TestCase(100, 20, 125)]
+        [TestCase(100, 50, 200)]
+        public void Story2(decimal donation, decimal taxRate, decimal expectedResult)
+        {
+            //arrange
+            var giftAidCalculator = new GiftAidCalculatorFixture().SetupTaxRate(taxRate).Create();
 
             //act
             var result = giftAidCalculator.Calculate(donation);
