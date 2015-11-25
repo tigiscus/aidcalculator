@@ -1,4 +1,5 @@
-﻿using GiftAidCalculator.TestConsole.Repositories;
+﻿using GiftAidCalculator.TestConsole.Logic.Enums;
+using GiftAidCalculator.TestConsole.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +17,7 @@ namespace GiftAidCalculator.TestConsole.Logic
             this.settingsRepository = settingsRepository;
         }
 
-        public decimal Calculate(decimal donation)
+        public decimal Calculate(decimal donation, EventType eventType = EventType.None)
         {
             var settings = settingsRepository.GetSettings();
             var taxRate = settings.TaxRate;

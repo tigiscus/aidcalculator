@@ -9,5 +9,6 @@ namespace GiftAidCalculator.TestConsole.Models
     public class GiftAidSettings
     {
         public decimal TaxRate { get; set; }
+        public IEnumerable<SupplementRule> SupplementRules { get; set; }
     }
 }
