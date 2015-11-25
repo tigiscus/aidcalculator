@@ -26,9 +26,12 @@ namespace GiftAidCalculator.Tests
         }
 
         [Test]
+        //test cases for story 2
         [TestCase(100, 20, 125)]
         [TestCase(100, 50, 200)]
-        public void Story2(decimal donation, decimal taxRate, decimal expectedResult)
+        //test cases for story 3
+        [TestCase(100, 40, 166.67)]
+        public void Story2And3(decimal donation, decimal taxRate, decimal expectedResult)
         {
             //arrange
             var giftAidCalculator = new GiftAidCalculatorFixture().SetupTaxRate(taxRate).Create();
