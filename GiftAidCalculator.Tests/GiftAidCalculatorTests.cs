@@ -46,7 +46,7 @@ namespace GiftAidCalculator.Tests
 
         [Test]
         [TestCase(100, 20, EventType.Running, EventType.Running, 5, 130)]
-        [TestCase(100, 20, EventType.Swimming, EventType.Swimming, 3, 130)]
+        [TestCase(100, 20, EventType.Swimming, EventType.Swimming, 3, 128)]
         [TestCase(100, 20, EventType.None, EventType.None, 0, 125)]
         [TestCase(100, 20, EventType.None, null, null, 125)]
         public void Story4(decimal donation, decimal taxRate, EventType selectedEventType, EventType? eventType, decimal supplementRate, decimal expectedResult)
