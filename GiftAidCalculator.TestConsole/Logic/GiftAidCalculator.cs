@@ -10,7 +10,9 @@ namespace GiftAidCalculator.TestConsole.Logic
     {
         public decimal Calculate(decimal donation)
         {
-            throw new NotImplementedException();
+            var ratio = 20m / (100 - 20m);
+            var result = donation * ratio;
+            return donation + result;
         }
     }
 }
