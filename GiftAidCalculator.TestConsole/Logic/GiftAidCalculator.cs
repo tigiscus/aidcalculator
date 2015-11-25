@@ -22,7 +22,7 @@ namespace GiftAidCalculator.TestConsole.Logic
             var taxRate = settings.TaxRate;
             var ratio = taxRate / (100 - taxRate);
             var result = donation * ratio;
-            return donation + result;
+            return Math.Round(donation + result, 2);
         }
     }
 }
